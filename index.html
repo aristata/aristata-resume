@@ -5,284 +5,745 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="장성민 — Java/Spring Boot 백엔드 개발자. PL·풀스택·DevOps 경험. 항만물류·PG·물류 도메인."
+      content="장성민 — Spring Boot 백엔드 개발자. 항만물류·PG·물류 도메인, PL 경험, 바이브 코딩."
     />
     <title>장성민 · Backend Developer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans+KR:wght@300;400;500;600;700&family=Syne:wght@600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <a class="skip-link" href="#main">본문으로 건너뛰기</a>
+    <div class="bg-mesh" aria-hidden="true"></div>
     <div class="bg-grain" aria-hidden="true"></div>
+    <div class="read-progress" aria-hidden="true"><span></span></div>
 
     <header class="site-header">
-      <a class="logo" href="#top">JSM</a>
+      <a class="logo" href="#top" aria-label="맨 위로">
+        <span class="logo-mark">&gt;_</span> jsm
+      </a>
       <nav class="nav" aria-label="주요 메뉴">
-        <a href="#about">소개</a>
+        <a href="#person">사람</a>
+        <a href="#vibe">Now</a>
         <a href="#experience">경력</a>
-        <a href="#projects">프로젝트</a>
-        <a href="#skills">기술</a>
-        <a
-          class="nav-notion"
-          href="https://aristatait.notion.site/800b58c746e248829fb6e510c47de8a6"
-          target="_blank"
-          rel="noopener noreferrer"
-          >상세 이력 (Notion)</a
-        >
+        <a href="#work">작업</a>
+        <a href="#stack">스택</a>
+        <button type="button" class="nav-help" data-open-help title="단축키 (?)">?</button>
       </nav>
       <button class="nav-toggle" type="button" aria-label="메뉴 열기" aria-expanded="false">
         <span></span><span></span>
       </button>
     </header>
 
-    <main id="top">
-      <section class="hero">
-        <p class="hero-kicker">Backend · PL · Fullstack</p>
-        <h1 class="hero-name">장성민</h1>
-        <p class="hero-lead">
-          Spring Boot 기반 API·웹 서버를 중심으로,<br />
-          항만물류·결제(PG)·물류 도메인에서 PL과 실무를 함께 해온 개발자입니다.
-        </p>
-        <div class="hero-actions">
-          <a
-            class="btn btn-primary"
-            href="https://aristatait.notion.site/800b58c746e248829fb6e510c47de8a6"
-            target="_blank"
-            rel="noopener noreferrer"
-            >전체 경력 기술서 보기</a
-          >
-          <a
-            class="btn btn-ghost"
-            href="https://github.com/aristata"
-            target="_blank"
-            rel="noopener noreferrer"
-            >GitHub</a
-          >
+    <main id="main">
+      <!-- HERO -->
+      <section class="hero" id="top">
+        <div class="hero-copy">
+          <p class="hero-kicker">
+            <span class="dot" aria-hidden="true"></span>
+            available for next chapter
+          </p>
+          <h1 class="hero-name">장성민</h1>
+          <p class="hero-role" id="typed-role" aria-live="polite">Backend Developer</p>
+          <p class="hero-lead">
+            Spring Boot로 API와 웹 서버를 만들고,<br />
+            항만물류·결제·물류 도메인에서 개발과 PL을 같이 해 온 사람입니다.<br />
+            최근엔 AI 에이전트와 바이브 코딩으로 만들고 싶은 걸 더 빠르게 만들고 있습니다.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#experience">경력 탐색</a>
+            <a
+              class="btn btn-ghost"
+              href="https://github.com/aristata"
+              target="_blank"
+              rel="noopener noreferrer"
+              >GitHub</a
+            >
+            <button type="button" class="btn btn-ghost" data-open-help>단축키 ?</button>
+          </div>
+          <dl class="hero-stats">
+            <div><dt>경력</dt><dd>9년+</dd></div>
+            <div><dt>PL</dt><dd>~5년</dd></div>
+            <div><dt>주력</dt><dd>Java / Spring</dd></div>
+            <div><dt>최근</dt><dd>Vibe Coding</dd></div>
+          </dl>
         </div>
-        <dl class="hero-meta">
-          <div>
-            <dt>경력</dt>
-            <dd>약 9년+</dd>
+        <aside class="hero-terminal" aria-label="미니 터미널">
+          <div class="term-bar">
+            <span></span><span></span><span></span>
+            <em>whoami.sh</em>
           </div>
-          <div>
-            <dt>PL</dt>
-            <dd>약 5년</dd>
+          <div class="term-body" id="term-body">
+            <p><span class="term-prompt">$</span> whoami</p>
+            <p class="term-out">jang.seongmin — backend · pl · lifelong learner</p>
+            <p><span class="term-prompt">$</span> cat ./focus.txt</p>
+            <p class="term-out">
+              spring boot · domain depth · ai-assisted delivery<br />
+              currently shipping side projects with agents
+            </p>
+            <p><span class="term-prompt">$</span> <span class="term-cursor" aria-hidden="true"></span></p>
           </div>
-          <div>
-            <dt>주력</dt>
-            <dd>Java · Spring Boot</dd>
-          </div>
-        </dl>
+          <label class="term-input-wrap" for="term-input">
+            <span class="term-prompt">$</span>
+            <input
+              id="term-input"
+              type="text"
+              autocomplete="off"
+              spellcheck="false"
+              placeholder="help 입력 후 Enter"
+              aria-label="터미널 명령 입력"
+            />
+          </label>
+        </aside>
       </section>
 
-      <section id="about" class="section reveal">
+      <!-- PERSON -->
+      <section id="person" class="section">
         <div class="section-head">
-          <h2>한눈에 보는 소개</h2>
-          <p>면접관이 빠르게 맥락을 잡을 수 있도록 요약한 버전입니다.</p>
-        </div>
-        <div class="about-grid">
-          <p class="about-copy">
-            경제학을 전공한 뒤 개발자로 전향해, <strong>Kotlin/Java · Spring Boot · JPA · QueryDSL</strong>로
-            백엔드를 주로 맡아 왔습니다. React / Next.js / Vue 프론트와 온프레미스 DevOps까지 범위를 넓혀 왔고,
-            최근에는 Cursor·Claude Code·Codex 같은 AI 도구를 실무에 적극 활용했습니다.
+          <p class="eyebrow">01 — Person</p>
+          <h2>이력서 이전, 사람</h2>
+          <p class="section-desc">
+            <span>기술 스택만으로는 같이 일할 사람을 고르기 어렵습니다.</span>
+            <span>카드를 눌러 가치관을 펼쳐 보세요.</span>
           </p>
-          <ul class="about-points">
-            <li>도메인: 항만물류 · PG/정산 · 물류·창고 · 회계·빌링</li>
-            <li>역할: 백엔드 개발 + PL / 사실상 PM 롤 경험</li>
-            <li>학력: 부산대학교 경제학 전공 · 국제무역학 부전공</li>
-            <li>자격: 정보처리기사 외 회계·전산 관련 자격</li>
+        </div>
+
+        <div class="person-grid">
+          <article class="persona-card">
+            <p class="mono-label">MBTI</p>
+            <h3>ISFJ</h3>
+            <p class="persona-sub">용감한 수호자 · 접합도 95%</p>
+            <p>
+              맡은 일을 끝까지 챙기고, 팀의 안정감을 만드는 편입니다.
+              화려함보다 신뢰할 수 있는 결과물을 남기고 싶어 합니다.
+            </p>
+            <ul class="chip-row">
+              <li>책임감</li>
+              <li>디테일</li>
+              <li>협업</li>
+              <li>꾸준함</li>
+            </ul>
+          </article>
+
+          <article class="persona-card">
+            <p class="mono-label">Background</p>
+            <h3>경제학 → 개발</h3>
+            <p class="persona-sub">부산대 경제학 · 국제무역학 부전공</p>
+            <p>
+              금융·회계 쪽으로 가려다 서른 즈음 전향했습니다.
+              늦은 출발이 걱정돼 퇴근 후 인강·서적, 주말 스터디로 속도를 붙였습니다.
+              그 덕에 회계·정산·물류 도메인이 낯설지 않습니다.
+            </p>
+          </article>
+        </div>
+
+        <div class="values" data-values>
+          <button type="button" class="value-card is-open" data-value="0" aria-expanded="true">
+            <span class="value-index">01</span>
+            <span class="value-title">디테일이 명품을 만든다</span>
+            <span class="value-hint">열기</span>
+          </button>
+          <button type="button" class="value-card" data-value="1" aria-expanded="false">
+            <span class="value-index">02</span>
+            <span class="value-title">칭찬은 고래도 춤추게 한다</span>
+            <span class="value-hint">열기</span>
+          </button>
+          <button type="button" class="value-card" data-value="2" aria-expanded="false">
+            <span class="value-index">03</span>
+            <span class="value-title">아 다르고 어 다르다</span>
+            <span class="value-hint">열기</span>
+          </button>
+          <button type="button" class="value-card" data-value="3" aria-expanded="false">
+            <span class="value-index">04</span>
+            <span class="value-title">모든 일은 양면성을 가진다</span>
+            <span class="value-hint">열기</span>
+          </button>
+          <button type="button" class="value-card" data-value="4" aria-expanded="false">
+            <span class="value-index">05</span>
+            <span class="value-title">중용을 최고의 미덕으로</span>
+            <span class="value-hint">열기</span>
+          </button>
+        </div>
+        <div class="value-panel" id="value-panel" aria-live="polite">
+          <p class="value-quote">“이왕 만드는 거, 잘 만들고 싶습니다.”</p>
+          <p>
+            작은 예외 처리, 로그, 네이밍, 배포 전 체크리스트까지.
+            티 나지 않는 디테일이 서비스의 신뢰가 된다고 믿습니다.
+            시드 코드와 공통 모듈을 먼저 다듬어 온 이유도 여기에 있습니다.
+          </p>
+        </div>
+
+        <div class="workstyle">
+          <h3>같이 일하면 이런 느낌</h3>
+          <div class="workstyle-grid">
+            <article>
+              <h4>챙김형 오너십</h4>
+              <p>이슈를 떠넘기기보다 원인을 끝까지 보고, 재발 방지까지 남기려 합니다.</p>
+            </article>
+            <article>
+              <h4>설명 가능한 코드</h4>
+              <p>혼자만 아는 마법보다, 다음 사람이 이어받을 수 있는 구조를 선호합니다.</p>
+            </article>
+            <article>
+              <h4>도구 실험가</h4>
+              <p>Cursor · Claude Code · Codex를 실무·사이드에 적극 씁니다. 생산성 실험이 취미입니다.</p>
+            </article>
+            <article>
+              <h4>도메인 호기심</h4>
+              <p>회계·정산·물류·PG·항만까지. 비즈니스 언어를 코드로 옮기는 일을 좋아합니다.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- VIBE / NOW -->
+      <section id="vibe" class="section section-vibe">
+        <div class="section-head">
+          <p class="eyebrow">02 — Now · Vibe Coding</p>
+          <h2>요즘 빠져 있는 것</h2>
+          <p class="section-desc">
+            <span>AI 에이전트와 함께 “만들고 싶은 것을 바로 제품으로” 가져가는 실험을 하고 있습니다.</span>
+            <span>이력서에 적기 민망할 정도로 재밌어서, 일부러 적습니다.</span>
+          </p>
+        </div>
+
+        <div class="vibe-grid">
+          <article class="vibe-card">
+            <div class="vibe-top">
+              <p class="mono-label">Side Project · Shipped</p>
+              <h3>귀곡팔황 트레이너</h3>
+              <p class="vibe-meta">MelonLoader 브리지 · Trainer UI · 배포 ZIP 패키징</p>
+            </div>
+            <p>
+              스팀 게임 <strong>귀곡팔황(鬼谷八荒)</strong>용 트레이너를
+              기획부터 브리지 DLL, UI, 릴리즈 패키징까지 만들어 배포했습니다.
+              에이전트와 페어로 리버스·IPC·버전 관리·사용자 피드백 반영 루프를 돌린
+              바이브 코딩 실전 케이스입니다.
+            </p>
+            <ul>
+              <li>Mods 브리지 + Trainer exe 구조로 배포</li>
+              <li>버전드 ZIP 패키징 스크립트와 설치 가이드</li>
+              <li>실사용 피드백을 받아 패치 반복 (예: 0.1.x 라인)</li>
+            </ul>
+            <p class="vibe-note">소스 저장소는 private · 배포 산출물로 사용자에게 전달</p>
+          </article>
+
+          <article class="vibe-card">
+            <div class="vibe-top">
+              <p class="mono-label">Life OS · Agent Workflow</p>
+              <h3>나만의 개인트레이너</h3>
+              <p class="vibe-meta">Vault · MCP · 루틴 설계 · 기록 축적</p>
+            </div>
+            <p>
+              운동도 “감”이 아니라 시스템으로 굴리려 합니다.
+              Obsidian 볼트에 부위별 운동법을 정리하고,
+              MCP로 에이전트와 연결해 <strong>루틴을 짜고 실행 기록을 쌓는</strong> 흐름을 만들었습니다.
+            </p>
+            <ul>
+              <li>볼트 문서 규약에 맞춰 등·코어·가슴 등 운동 지식 구조화</li>
+              <li>에이전트가 볼트를 읽고 루틴/기록을 도와주도록 연계</li>
+              <li>“개발 도구 = 생활 도구”로 쓰는 실험</li>
+            </ul>
+            <p class="vibe-note">지식 관리와 에이전트 워크플로를 일상까지 확장</p>
+          </article>
+        </div>
+
+        <div class="vibe-tools">
+          <p class="mono-label">Daily drivers</p>
+          <ul class="chip-row chip-row-lg">
+            <li>Cursor</li>
+            <li>Claude Code</li>
+            <li>Codex</li>
+            <li>Obsidian</li>
+            <li>MCP</li>
+            <li>GitHub</li>
           </ul>
         </div>
       </section>
 
-      <section id="experience" class="section reveal">
-        <div class="section-head">
-          <h2>경력 하이라이트</h2>
-          <p>
-            최신 이력 중심으로 역할과 성과만 남겼습니다. 프로젝트별 상세는
-            <a
-              href="https://aristatait.notion.site/800b58c746e248829fb6e510c47de8a6"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Notion 경력 기술서</a
-            >를 참고해 주세요.
-          </p>
+      <!-- EXPERIENCE -->
+      <section id="experience" class="section">
+        <div class="section-head section-head-row">
+          <div>
+            <p class="eyebrow">03 — Experience</p>
+            <h2>경력</h2>
+            <p>카드의 “자세히”를 누르면 프로젝트·성과가 펼쳐집니다.</p>
+          </div>
+          <div class="exp-toolbar">
+            <button type="button" class="btn btn-ghost btn-sm" id="expand-all">모두 펼치기</button>
+            <button type="button" class="btn btn-ghost btn-sm" id="collapse-all">모두 접기</button>
+          </div>
         </div>
 
-        <ol class="timeline">
-          <li class="timeline-item">
-            <div class="timeline-when">2025.04 — 2026.07</div>
-            <div class="timeline-body">
-              <h3>골디락스쉬핑 <span>(포트넥스)</span></h3>
-              <p class="role">항만물류 · PL / 풀스택 / DevOps</p>
-              <ul>
-                <li>체인포털·관리자 리뉴얼 PL (최대 5인) — 스케줄·감독관 미팅·감리 대응까지 수행</li>
-                <li>온프레미스 개발·운영 서버 구축 및 운영</li>
-                <li>Spring Boot + 전자정부프레임워크 기반 사내 시드 코드·공통 모듈 표준화</li>
-                <li>원청(부산항만공사) 환경에서 유지보수·개선 및 배포 브리핑</li>
-              </ul>
-              <p class="stack">Spring Boot · eGovFrame · JPA · Security · OpenSearch · JWT</p>
+        <div class="exp-list">
+          <!-- Goldilocks -->
+          <article class="exp-item" data-exp>
+            <header class="exp-head">
+              <div class="exp-when">
+                <time datetime="2025-04">2025.04</time>
+                <span>—</span>
+                <time datetime="2026-07">2026.07</time>
+              </div>
+              <div class="exp-main">
+                <h3>골디락스쉬핑 <span>(포트넥스)</span></h3>
+                <p class="exp-role">항만물류 · PL · Fullstack · DevOps</p>
+                <p class="exp-summary">
+                  원청(부산항만공사) 환경에서 체인포털 리뉴얼을 이끌며,
+                  서버 구축부터 감리 대응까지 한 사이클로 수행했습니다.
+                </p>
+              </div>
+              <button type="button" class="exp-toggle" aria-expanded="false">
+                자세히 <span aria-hidden="true">+</span>
+              </button>
+            </header>
+            <div class="exp-body" hidden>
+              <div class="exp-body-grid">
+                <div>
+                  <h4>하이라이트</h4>
+                  <ul>
+                    <li>체인포털·관리자 리뉴얼 PL (최대 5인) — 일정, 감독관 미팅, 감리 대응</li>
+                    <li>온프레미스 개발·운영 서버 구축 및 운영</li>
+                    <li>Spring Boot + 전자정부프레임워크 사내 시드 코드·공통 모듈 표준화</li>
+                    <li>유지보수·개선 및 배포 브리핑 자료 작성</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4>주요 과제</h4>
+                  <ul class="project-mini">
+                    <li>
+                      <strong>체인포털·관리자 리뉴얼</strong>
+                      <span>2025.06 — 2026.03 · PL</span>
+                      Backend 중심 리딩 + 서버·감리·대외 커뮤니케이션
+                    </li>
+                    <li>
+                      <strong>사내 시드 코드</strong>
+                      <span>2025.04 — 2025.06 · 1인</span>
+                      Security, JWT, 암호화, 마스킹, 멀티 DB, Swagger, 엑셀, 메일/문자, OpenSearch 등
+                    </li>
+                    <li>
+                      <strong>체인포털 운영·개선</strong>
+                      <span>2026.03 — 2026.07</span>
+                      원청 감독 하 유지보수·배포 보고
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <p class="stack-line">Spring Boot · eGovFrame · JPA · Security · OpenSearch · JWT</p>
             </div>
-          </li>
+          </article>
 
-          <li class="timeline-item">
-            <div class="timeline-when">2021.10 — 2025.03</div>
-            <div class="timeline-body">
-              <h3>옵타움플랫폼</h3>
-              <p class="role">PG 서비스 · 개발팀 총괄 / 백엔드·프론트 파트장 / PL</p>
-              <ul>
-                <li>개발팀 총괄(최대 11인) 및 백엔드·프론트엔드 파트 리딩</li>
-                <li>국내·해외 결제·정산 솔루션 개발·유지보수, 오직페이 기능·기획 참여</li>
-                <li>코인 P2P 거래소·블록체인 결제(DApp) 리딩 및 인프라(AWS·Docker) 구축</li>
-                <li>신입 OJT 교육용 React/Next.js 샘플 프로젝트 제작·교육</li>
-              </ul>
-              <p class="stack">Kotlin · Spring Boot · React · Next.js · Vue · Web3 · AWS</p>
+          <!-- Optaum -->
+          <article class="exp-item" data-exp>
+            <header class="exp-head">
+              <div class="exp-when">
+                <time datetime="2021-10">2021.10</time>
+                <span>—</span>
+                <time datetime="2025-03">2025.03</time>
+              </div>
+              <div class="exp-main">
+                <h3>옵타움플랫폼</h3>
+                <p class="exp-role">PG/결제 · 팀장·파트장 · PL · Backend · Frontend</p>
+                <p class="exp-summary">
+                  결제·정산 도메인에서 개발과 리딩을 오가며,
+                  최대 11인 개발팀 총괄과 파트장을 경험했습니다.
+                </p>
+              </div>
+              <button type="button" class="exp-toggle" aria-expanded="false">
+                자세히 <span aria-hidden="true">+</span>
+              </button>
+            </header>
+            <div class="exp-body" hidden>
+              <div class="exp-body-grid">
+                <div>
+                  <h4>하이라이트</h4>
+                  <ul>
+                    <li>개발팀 총괄(최대 11인), Backend·Frontend 파트장, 과제 PL</li>
+                    <li>국내·해외 결제·정산 솔루션, 오직페이 기능·기획</li>
+                    <li>코인 P2P 거래소·블록체인 결제(DApp) PL + AWS·Docker 환경</li>
+                    <li>신입 OJT용 React/Next.js 샘플과 교육</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4>주요 과제</h4>
+                  <ul class="project-mini">
+                    <li>
+                      <strong>코인 P2P 거래소 구축·리팩토링</strong>
+                      <span>2023.02 — 2024.05 · PL · Frontend</span>
+                      Next.js · Web3 · shadcn · AWS
+                    </li>
+                    <li>
+                      <strong>결제·정산 / Visa CyberSource / Audit</strong>
+                      <span>2021.10 — 2025.03 · Backend · Frontend</span>
+                      Kotlin/Spring, React/Vue 기반 핵심 기능
+                    </li>
+                    <li>
+                      <strong>블록체인 토큰·DApp</strong>
+                      <span>2022 · Solidity · Web3</span>
+                      사내 토큰, 결제 DApp, DynamoDB 이력
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <p class="stack-line">Kotlin · Spring Boot · React · Next.js · Vue · Web3 · AWS</p>
             </div>
-          </li>
+          </article>
 
-          <li class="timeline-item">
-            <div class="timeline-when">2021.07 — 2021.09</div>
-            <div class="timeline-body">
-              <h3>앤디소프트</h3>
-              <p class="role">모바일 SNS · 기획·테스트</p>
-              <ul>
-                <li>차세대 머신러닝 SNS 프로젝트에서 기획·테스트 업무 수행</li>
-              </ul>
+          <!-- Andysoft -->
+          <article class="exp-item" data-exp>
+            <header class="exp-head">
+              <div class="exp-when">
+                <time datetime="2021-07">2021.07</time>
+                <span>—</span>
+                <time datetime="2021-09">2021.09</time>
+              </div>
+              <div class="exp-main">
+                <h3>앤디소프트</h3>
+                <p class="exp-role">모바일 SNS · 기획·테스트</p>
+                <p class="exp-summary">
+                  머신러닝 SNS 과제에서 기획·테스트로 제품 흐름을 익힌 짧은 구간입니다.
+                </p>
+              </div>
+              <button type="button" class="exp-toggle" aria-expanded="false">
+                자세히 <span aria-hidden="true">+</span>
+              </button>
+            </header>
+            <div class="exp-body" hidden>
+              <div class="exp-body-grid">
+                <div>
+                  <h4>하이라이트</h4>
+                  <ul>
+                    <li>백엔드로 합류했으나 약 3개월간 기획·테스트 중심으로 기여</li>
+                    <li>요구사항과 QA 관점을 이후 PL 업무에 재활용</li>
+                  </ul>
+                </div>
+              </div>
             </div>
-          </li>
+          </article>
 
-          <li class="timeline-item">
-            <div class="timeline-when">2016.12 — 2021.03</div>
-            <div class="timeline-body">
-              <h3>이멕스</h3>
-              <p class="role">물류 서비스 · 백엔드 / PL</p>
-              <ul>
-                <li>Billing 자동화·인보이스, Shippingman, Delibird 계열 마이크로서비스 PL·개발</li>
-                <li>사내 최초 Kotlin·JPA 도입 및 팀 스킬 공유</li>
-                <li>글로벌 셀러·회계팀과의 빌링 운영·고도화 창구 역할</li>
-              </ul>
-              <p class="stack">Kotlin · Spring Boot · WebFlux · JPA · Vue.js · AWS EB</p>
+          <!-- Emex -->
+          <article class="exp-item" data-exp>
+            <header class="exp-head">
+              <div class="exp-when">
+                <time datetime="2016-12">2016.12</time>
+                <span>—</span>
+                <time datetime="2021-03">2021.03</time>
+              </div>
+              <div class="exp-main">
+                <h3>이멕스</h3>
+                <p class="exp-role">물류 · PL · Backend</p>
+                <p class="exp-summary">
+                  Billing·배송대행·마이크로서비스 계열을 만들며
+                  사내 최초 Kotlin·JPA 도입을 이끌었습니다.
+                </p>
+              </div>
+              <button type="button" class="exp-toggle" aria-expanded="false">
+                자세히 <span aria-hidden="true">+</span>
+              </button>
+            </header>
+            <div class="exp-body" hidden>
+              <div class="exp-body-grid">
+                <div>
+                  <h4>하이라이트</h4>
+                  <ul>
+                    <li>Billing 자동화·인보이스, Shippingman, Delibird 계열 PL·개발</li>
+                    <li>Kotlin·JPA 사내 최초 도입 및 스킬 공유</li>
+                    <li>글로벌 셀러·회계팀과의 빌링 운영 창구</li>
+                    <li>Vue.js 프론트, AWS Elastic Beanstalk 운영 경험</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4>대표 서비스</h4>
+                  <ul class="project-mini">
+                    <li><strong>Billingman / Invoice</strong> — 요금 계산·인보이스 자동화</li>
+                    <li><strong>Shippingman</strong> — 배송대행·직접배송 관리</li>
+                    <li><strong>Delibird 계열</strong> — Label, File, Crowd, BuyerPortal 등 MSA</li>
+                    <li><strong>One Portal</strong> — 핵심 포털 유지보수·전환</li>
+                  </ul>
+                </div>
+              </div>
+              <p class="stack-line">Kotlin · Spring Boot · WebFlux · JPA · Vue.js · AWS EB</p>
             </div>
-          </li>
-        </ol>
+          </article>
+        </div>
+      </section>
 
-        <aside class="notion-callout">
+      <!-- FEATURED WORK -->
+      <section id="work" class="section">
+        <div class="section-head section-head-row">
           <div>
-            <strong>더 자세한 경력 기술서가 필요하신가요?</strong>
-            <p>
-              프로젝트 단위 기간·역할·사용 기술·특이사항은 Notion에 전부 정리해 두었습니다.
+            <p class="eyebrow">04 — Strengths</p>
+            <h2>이런 일을 맡기면 잘합니다</h2>
+            <p class="section-desc">
+              <span>자랑 목록이 아니라, 팀에 바로 붙일 수 있는 역할입니다.</span>
+              <span>“자세히”를 누르면 근거 경험과 일하는 방식이 펼쳐집니다.</span>
             </p>
           </div>
-          <a
-            class="btn btn-primary"
-            href="https://aristatait.notion.site/800b58c746e248829fb6e510c47de8a6"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Notion에서 상세 보기</a
-          >
-        </aside>
+          <div class="exp-toolbar">
+            <button type="button" class="btn btn-ghost btn-sm" id="expand-work">모두 펼치기</button>
+            <button type="button" class="btn btn-ghost btn-sm" id="collapse-work">모두 접기</button>
+          </div>
+        </div>
+
+        <div class="work-list">
+          <article class="work-item" data-work>
+            <header class="work-head">
+              <div class="work-num">01</div>
+              <div class="work-main">
+                <h3>Spring Backend</h3>
+                <p class="work-tags">Java · Kotlin · Spring Boot</p>
+                <p class="work-one">쓸 수 있는 API·공통 기반을 만듭니다</p>
+              </div>
+              <button type="button" class="exp-toggle work-toggle" aria-expanded="false">
+                자세히 <span aria-hidden="true">+</span>
+              </button>
+            </header>
+            <div class="work-detail" hidden>
+              <p class="work-can">
+                Java/Kotlin · Spring Boot · JPA 중심으로 웹·API 서버를 설계하고,
+                Security·JWT·암호화·예외·문서화 같은 공통 모듈을 처음부터 맞춰 둡니다.
+              </p>
+              <p class="work-label">근거 경험</p>
+              <ul>
+                <li>골디락스 — 사내 Spring 시드 코드 표준화 (1인)</li>
+                <li>멀티 DB, Swagger, 마스킹, 엑셀·메일/문자, OpenSearch 모듈화</li>
+              </ul>
+              <p class="work-fit">
+                <strong>일하는 방식</strong> — 혼자만 아는 코드보다, 다음 사람이 바로 이어갈 출발선을 남기려 합니다.
+              </p>
+            </div>
+          </article>
+
+          <article class="work-item" data-work>
+            <header class="work-head">
+              <div class="work-num">02</div>
+              <div class="work-main">
+                <h3>비즈니스 도메인</h3>
+                <p class="work-tags">경제·정산 · PG · 물류 · 항만</p>
+                <p class="work-one">개발 지상주의에 빠지지 않고, 일의 맥락을 봅니다</p>
+              </div>
+              <button type="button" class="exp-toggle work-toggle" aria-expanded="false">
+                자세히 <span aria-hidden="true">+</span>
+              </button>
+            </header>
+            <div class="work-detail" hidden>
+              <p class="work-can">
+                경제학 전공 출신으로, “코드가 돌아가는가”보다
+                <strong>왜 이 기능이 필요한지·돈이 어디서 맞고 깨지는지</strong>를 먼저 묻습니다.
+                결제·정산·물류·항만처럼 현장과 숫자가 있는 업무 시스템을 비즈니스 언어로 이해하고 구현합니다.
+              </p>
+              <p class="work-label">근거 경험</p>
+              <ul>
+                <li>옵타움 — 국내·해외 PG, 정산, Visa CyberSource, Transaction Audit</li>
+                <li>골디락스 — 부산항만공사 원청 환경의 체인포털</li>
+                <li>이멕스 — Billing·인보이스, 글로벌 셀러·회계팀과의 운영 창구</li>
+              </ul>
+              <p class="work-fit">
+                <strong>일하는 방식</strong> — 기술 선택도 “멋진가”보다 “업무·운영에 맞는가”로 무던히 조율합니다.
+              </p>
+            </div>
+          </article>
+
+          <article class="work-item" data-work>
+            <header class="work-head">
+              <div class="work-num">03</div>
+              <div class="work-main">
+                <h3>Project Leading</h3>
+                <p class="work-tags">PL · 일정 · 대외 창구</p>
+                <p class="work-one">개발만 하지 않고, 일이 끝까지 가게 만듭니다</p>
+              </div>
+              <button type="button" class="exp-toggle work-toggle" aria-expanded="false">
+                자세히 <span aria-hidden="true">+</span>
+              </button>
+            </header>
+            <div class="work-detail" hidden>
+              <p class="work-can">
+                일정·리스크·이슈 트래킹과 함께, 감독관·감리·보고 같은 대외 창구까지 포함한
+                과제 리딩을 할 수 있습니다. 약 5년간의 PL 경험이 있습니다.
+              </p>
+              <p class="work-label">근거 경험</p>
+              <ul>
+                <li>체인포털·관리자 리뉴얼 PL (최대 5인) — 일정, 감독관 미팅, 감리 대응</li>
+                <li>옵타움 — 개발팀 총괄·파트장, 과제 단위 PL</li>
+              </ul>
+              <p class="work-fit">
+                <strong>일하는 방식</strong> — 독단보다 조율. 갈등을 키우기보다 하한선을 지키며 일을 앞으로 밉니다.
+              </p>
+            </div>
+          </article>
+
+          <article class="work-item" data-work>
+            <header class="work-head">
+              <div class="work-num">04</div>
+              <div class="work-main">
+                <h3>DevOps · 운영</h3>
+                <p class="work-tags">온프레미스 · AWS · Docker</p>
+                <p class="work-one">코딩만 하고 서버는 모르는 사람과는 결이 다릅니다</p>
+              </div>
+              <button type="button" class="exp-toggle work-toggle" aria-expanded="false">
+                자세히 <span aria-hidden="true">+</span>
+              </button>
+            </header>
+            <div class="work-detail" hidden>
+              <p class="work-can">
+                바이브 코딩으로 구현 속도는 빨라졌지만, <strong>처음부터 세팅하고 실제로 돌리는 일</strong>은
+                여전히 별 실력입니다. 개발 서버 구축부터 운영·배포 루프까지 손으로 해 본 경험이 있습니다.
+              </p>
+              <p class="work-label">근거 경험</p>
+              <ul>
+                <li>골디락스 — 온프레미스 개발·운영 서버 구축 및 운영</li>
+                <li>옵타움 — AWS·Docker 기반 개발 환경 구성 (P2P 거래소 등)</li>
+                <li>배포 브리핑·운영 이슈를 개발 백로그로 환원하는 습관</li>
+              </ul>
+              <p class="work-fit">
+                <strong>일하는 방식</strong> — “코드는 됐는데 서버는요?”가 뜨지 않게, 인프라까지 같이 챙깁니다.
+              </p>
+            </div>
+          </article>
+
+          <article class="work-item" data-work>
+            <header class="work-head">
+              <div class="work-num">05</div>
+              <div class="work-main">
+                <h3>Vibe Coding · AI Agent</h3>
+                <p class="work-tags">Claude Code · Cursor · Codex · MCP</p>
+                <p class="work-one">취미가 아니라, 실무 생산성으로 씁니다</p>
+              </div>
+              <button type="button" class="exp-toggle work-toggle" aria-expanded="false">
+                자세히 <span aria-hidden="true">+</span>
+              </button>
+            </header>
+            <div class="work-detail" hidden>
+              <p class="work-can">
+                AI 에이전트를 사이드 프로젝트에만 쓰지 않습니다.
+                <strong>체인포털 실무</strong>에서도 Claude Code로 개발 기획, 코드 리팩토링, 문서화에 활용했고,
+                사이드에서는 아이디어를 배포 가능한 산출물까지 밀어붙입니다.
+              </p>
+              <p class="work-label">근거 경험</p>
+              <ul>
+                <li>체인포털 — Claude Code로 기획 정리·리팩토링·문서화</li>
+                <li>귀곡팔황 트레이너 — 기획부터 브리지·UI·배포 ZIP까지 출시</li>
+                <li>옵시디언 × MCP — 운동 루틴 설계와 기록 축적 워크플로</li>
+              </ul>
+              <p class="work-fit">
+                <strong>일하는 방식</strong> — 실험은 과감하되, 버전·설치·공유 문서처럼 남에게 넘길 수 있게 정리합니다.
+              </p>
+            </div>
+          </article>
+        </div>
       </section>
 
-      <section id="projects" class="section reveal">
+      <!-- STACK -->
+      <section id="stack" class="section">
         <div class="section-head">
-          <h2>대표 프로젝트</h2>
-          <p>최근·임팩트 큰 작업만 골랐습니다.</p>
-        </div>
-        <div class="project-list">
-          <article class="project">
-            <h3>체인포털 · 관리자 리뉴얼</h3>
-            <p class="project-meta">골디락스쉬핑 · 2025.06 — 2026.03 · PL / 풀스택 / DevOps</p>
-            <p>
-              최대 5인 팀의 백엔드 리딩. 서버 구축·운영, 감리 문서·대응, 감독관 커뮤니케이션까지
-              사실상 PM 롤을 수행하며 리뉴얼을 완수했습니다.
-            </p>
-          </article>
-          <article class="project">
-            <h3>사내 Spring 시드 코드 표준화</h3>
-            <p class="project-meta">골디락스쉬핑 · 2025.04 — 2025.06 · 1인</p>
-            <p>
-              신설 IT팀을 위해 Security·JWT·암호화·마스킹·멀티 DB·Swagger·엑셀·메일/문자·OpenSearch 등
-              공통 모듈을 갖춘 시드 템플릿을 설계·구축했습니다.
-            </p>
-          </article>
-          <article class="project">
-            <h3>코인 P2P 거래소 · 리팩토링</h3>
-            <p class="project-meta">옵타움플랫폼 · 2023.02 — 2024.05 · 리딩 / 프론트</p>
-            <p>
-              Next.js·Web3 기반 P2P 거래소를 구축하고, App Router·shadcn 등으로 최신 스펙에 맞춰
-              리팩토링했습니다. AWS·Docker 개발 환경도 직접 구성했습니다.
-            </p>
-          </article>
-          <article class="project">
-            <h3>결제·정산 솔루션</h3>
-            <p class="project-meta">옵타움플랫폼 · 2021.10 — 2025.03 · 백엔드·프론트·PL</p>
-            <p>
-              국내·해외 PG, 정산 일괄 처리, Visa CyberSource 연동, Transaction Audit 등
-              결제 도메인 핵심 기능을 Kotlin/Spring·React/Vue로 개발·개선했습니다.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section id="skills" class="section reveal">
-        <div class="section-head">
+          <p class="eyebrow">05 — Stack</p>
           <h2>기술 스택</h2>
-          <p>실무에서 주력으로 쓴 기술 위주입니다.</p>
+          <p>필터를 누르면 해당 영역만 남습니다. 깊이는 막대 길이로 표시했습니다.</p>
         </div>
-        <div class="skill-grid">
-          <div>
-            <h3>Backend</h3>
-            <p>Java · Kotlin · Spring Boot · JPA · QueryDSL · Spring Security · WebFlux</p>
-          </div>
-          <div>
-            <h3>Frontend</h3>
-            <p>React · Next.js · Vue.js · TypeScript / JavaScript</p>
-          </div>
-          <div>
-            <h3>Data · Infra</h3>
-            <p>MariaDB · PostgreSQL · MongoDB · Docker · AWS · OpenSearch</p>
-          </div>
-          <div>
-            <h3>기타</h3>
-            <p>전자정부프레임워크 · Web3 / Solidity · AI Agent (Cursor, Claude Code, Codex)</p>
-          </div>
+
+        <div class="stack-filters" role="tablist" aria-label="스택 필터">
+          <button type="button" class="is-active" data-filter="all" role="tab" aria-selected="true">All</button>
+          <button type="button" data-filter="backend" role="tab" aria-selected="false">Backend</button>
+          <button type="button" data-filter="frontend" role="tab" aria-selected="false">Frontend</button>
+          <button type="button" data-filter="infra" role="tab" aria-selected="false">Infra</button>
+          <button type="button" data-filter="domain" role="tab" aria-selected="false">Domain</button>
+          <button type="button" data-filter="ai" role="tab" aria-selected="false">AI / Tooling</button>
         </div>
+
+        <ul class="stack-list" id="stack-list">
+          <li data-cat="backend" style="--lv: 95"><span>Java / Kotlin</span><i></i></li>
+          <li data-cat="backend" style="--lv: 95"><span>Spring Boot</span><i></i></li>
+          <li data-cat="backend" style="--lv: 90"><span>JPA · QueryDSL</span><i></i></li>
+          <li data-cat="backend" style="--lv: 80"><span>Spring Security</span><i></i></li>
+          <li data-cat="backend" style="--lv: 75"><span>WebFlux</span><i></i></li>
+          <li data-cat="frontend" style="--lv: 80"><span>React</span><i></i></li>
+          <li data-cat="frontend" style="--lv: 75"><span>Next.js</span><i></i></li>
+          <li data-cat="frontend" style="--lv: 70"><span>Vue.js</span><i></i></li>
+          <li data-cat="frontend" style="--lv: 75"><span>JavaScript / TypeScript</span><i></i></li>
+          <li data-cat="infra" style="--lv: 70"><span>AWS</span><i></i></li>
+          <li data-cat="infra" style="--lv: 70"><span>Docker</span><i></i></li>
+          <li data-cat="infra" style="--lv: 65"><span>MariaDB / PostgreSQL</span><i></i></li>
+          <li data-cat="infra" style="--lv: 55"><span>MongoDB / OpenSearch</span><i></i></li>
+          <li data-cat="domain" style="--lv: 90"><span>결제 · 정산 · PG</span><i></i></li>
+          <li data-cat="domain" style="--lv: 85"><span>물류 · 창고</span><i></i></li>
+          <li data-cat="domain" style="--lv: 80"><span>항만물류</span><i></i></li>
+          <li data-cat="domain" style="--lv: 75"><span>회계 · 빌링</span><i></i></li>
+          <li data-cat="ai" style="--lv: 85"><span>Cursor / Claude Code / Codex</span><i></i></li>
+          <li data-cat="ai" style="--lv: 70"><span>MCP · Obsidian workflow</span><i></i></li>
+          <li data-cat="ai" style="--lv: 60"><span>Web3 / Solidity</span><i></i></li>
+        </ul>
       </section>
 
-      <section id="more" class="section section-compact reveal">
+      <!-- MORE -->
+      <section id="more" class="section section-compact">
         <div class="more-grid">
           <div>
+            <p class="eyebrow">Education</p>
             <h2>학력</h2>
-            <p><strong>부산대학교</strong> · 경제학 전공 / 국제무역학 부전공</p>
-            <p class="muted">2006.03 — 2013.08</p>
+            <p><strong>부산대학교</strong></p>
+            <p>경제학 전공 · 국제무역학 부전공</p>
+            <p class="muted">2006.03 — 2013.08 · 학점 3.2 / 4.5</p>
           </div>
           <div>
+            <p class="eyebrow">Certificates</p>
             <h2>자격</h2>
-            <p>정보처리기사 · 회계관리1급 · 전산회계1·2급 외</p>
-            <p class="muted">전체 목록은 Notion 참고</p>
+            <ul class="plain-list">
+              <li>정보처리기사 (2016)</li>
+              <li>회계관리 1급 · 전산회계 1·2급</li>
+              <li>워드프로세서 2·3급 · MCAS 2007 Master</li>
+            </ul>
+          </div>
+          <div>
+            <p class="eyebrow">Training</p>
+            <h2>교육</h2>
+            <ul class="plain-list">
+              <li>부산IT교육센터 · NFC&지능형센서응용 (Java/Spring 등)</li>
+              <li>부산정보산업진흥원 · Python / Linux / Node.js</li>
+            </ul>
           </div>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>© <span id="year"></span> 장성민 · 이력서 요약본</p>
-      <p>
-        상세 이력:
+      <div>
+        <p class="footer-brand">장성민 · Backend Developer</p>
+        <p class="muted">이 페이지가 곧 이력서입니다. 더 깊은 원문이 필요하면 Notion도 열어둘 수 있습니다.</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com/aristata" target="_blank" rel="noopener noreferrer">GitHub</a>
         <a
           href="https://aristatait.notion.site/800b58c746e248829fb6e510c47de8a6"
           target="_blank"
           rel="noopener noreferrer"
-          >aristatait.notion.site</a
+          >Notion 원문</a
         >
-        ·
-        <a href="https://github.com/aristata" target="_blank" rel="noopener noreferrer">GitHub</a>
-      </p>
+        <button type="button" data-open-help>단축키</button>
+      </div>
     </footer>
+
+    <!-- Help modal -->
+    <div class="modal" id="help-modal" hidden>
+      <div class="modal-backdrop" data-close-help></div>
+      <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="help-title">
+        <header>
+          <h2 id="help-title">Keyboard shortcuts</h2>
+          <button type="button" class="modal-close" data-close-help aria-label="닫기">×</button>
+        </header>
+        <ul class="shortcut-list">
+          <li><kbd>?</kbd> 이 도움말</li>
+          <li><kbd>/</kbd> 터미널 포커스</li>
+          <li><kbd>1</kbd>…<kbd>5</kbd> 섹션 이동 (사람→스택)</li>
+          <li><kbd>e</kbd> 경력·강점 모두 펼치기</li>
+          <li><kbd>c</kbd> 경력·강점 모두 접기</li>
+          <li><kbd>Esc</kbd> 닫기</li>
+        </ul>
+        <p class="muted">터미널 명령: <code>help</code> <code>whoami</code> <code>stack</code> <code>vibe</code> <code>clear</code></p>
+      </div>
+    </div>
 
     <script src="script.js"></script>
   </body>
